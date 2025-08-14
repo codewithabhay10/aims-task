@@ -36,9 +36,15 @@ python -m src.infer assets/market.jpg "a vendor selling vegetables" "people talk
 ```cmd
 streamlit run app.py
 ```
-- Upload an image.
+- Upload one or more images.
 - Enter one or more queries, comma-separated.
 - Click Run. You’ll see detections and the best crop.
+
+## Batch CLI (multiple images)
+Process many images from files and/or folders and save outputs to `outputs/`:
+```cmd
+python -m src.batch_infer assets\ images\more_images --queries "a vendor selling vegetables" "people talking" --threshold 0.25 --topk 5 --out outputs
+```
 
 ## Data and training
 This prototype is zero-shot (no training required). For a full project, build a dataset of dense scenes with text annotations and fine-tune an open-vocabulary grounding model (e.g., GroundingDINO, OWLv2 finetuning via detection heads). Consider hard negatives and multi-instance scenes.
