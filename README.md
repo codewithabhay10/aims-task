@@ -152,7 +152,6 @@ python -m src.batch_infer assets\ images\more_images --queries "a vendor selling
 - Added raw output panel in the UI: score histogram + top‑5 raw boxes.
 
 ---
-
 ## Known limitations and tips
 - Zero‑shot open‑vocabulary detection may yield low absolute scores; use Auto‑select.
 - Distractors and tiny objects are hard; increase min box area or try re‑ranking.
